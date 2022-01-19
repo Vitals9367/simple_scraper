@@ -46,14 +46,13 @@ def main():
         #scrap page
         scrap_search(link)
 
-        #commit the inserts
-        conn.commit()
-
 if __name__ == '__main__':
 
     while True:
         print('Scraping pages...')
         main()
+        #commit the inserts
+        conn.commit()
 
         print(f'Waiting {sleep_time} minutes...')
         time.sleep(sleep_time * 60)
